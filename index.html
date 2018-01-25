@@ -1,12 +1,29 @@
 <html>
  <head>
  <title>My First GUI</title>
-  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+ <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+ <link rel="stylesheet" href="phone.css">
+
+
  </head>
  <body>
-  <div class="className" id="idName"></div>
-  <div class="className" id="idName"></div>
-  <div class="className" id="idName"></div>
- Your page content.
+  
+  <div  id=“tab_bar”>
+  	<button class="className" id="idName">Dialer</button>
+  	<button class="className" id="idName">Contact List</button>
+  	<button class="className" id="idName">Add Contact</button>
+  </div>
+
+  <div id=“content”> 
+	<div id=“content_dialer”> </div>
+	<div id=“content_list”> </div>
+	<div id=“content_add”> </div>
+  </div>
+  
+
+  
+    
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="phone.js"></script>
  </body>
 </html>
