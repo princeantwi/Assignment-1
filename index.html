@@ -1,45 +1,80 @@
-<html>
- <head>
- <title>My First GUI</title>
- <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My First GUI</title>
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
  <link rel="stylesheet" href="phone.css">
+</head>
 
+<body>
+<!-- Tab links -->
+<div class="pure-button-group" role="group" aria-label="...">
+  <button class="pure-button pure-button-active" id="dialer">Dialer</button>
+  <button class="pure-button pure-button-active" id="contact_list">Contacts</button>
+  <button class="pure-button pure-button-active" id="add_contact">Add</button>
+</div>
 
- </head>
- <body>
-  
-  <div id=“tab_bar”>
-  	<button class="tab" onclick="">Dialer</button>
-  	<button class="tab" onclick="">Contact List</button>
-  	<button class="tab" onclick="">Add Contact</button>
+<!-- Tab content -->
+<div id="content">
+  <div id="content_dialer" class="tab_content">
+    <h2>Dialer</h2>
+
+     <input type="tel" id="telnumber" placeholder="(000)-000-0000">
+
+      <div id="keyboard">
+        <ol class="keys">
+         <li data-number='1'>1</li>
+         <li data-number='2'>2</li>
+         <li data-number='3'>3</li>
+         <li data-number='4'>4</li>
+         <li data-number='5'>5</li>
+         <li data-number='6'>6</li>
+         <li data-number='7'>7</li>
+         <li data-number='8'>8</li>
+         <li data-number='9'>9</li>
+         <li>*</li>
+         <li data-number='0'>0</li>
+         <li>#</li>
+         <li>Dial</li>
+         <li>-</li>
+         <li>Clear</li>
+        </ol>
+      </div>
   </div>
-	 
-	 <!-- Tab content -->
 
-  <div id=“content”> 
-	<div id=“content_dialer” class="tabcontent"> 
-	  <h3>London</h3>
-  		<p>London is the capital city of England.</p>
-	  </div>
-	  
-	<div id=“content_list” class="tabcontent"> 
-	  <h3>Paris</h3>
-  		<p>Paris is the capital of France.</p> 
-	  </div>
-	  
-	<div id=“content_add” class="tabcontent"> 
-	   <h3>Tokyo</h3>
-  		<p>Tokyo is the capital of Japan.</p>
-	  </div>
+  <div id="content_list" class="tab_content">
+    <button class="pure-button">Ryan Mensah</button>
+    <button class="pure-button">Atta Mmorosa</button>
+    <button class="pure-button">Felix Antwi</button>
+    <button class="pure-button">Mavis Antwi</button>
+    <button class="pure-button">Mark Antwi</button>
+
   </div>
-  
-<form class="pure-form pure-form-stacked">
- <label for="name">Name</label>
- <input id="name" placeholder="Jane Smith">
-</form>
-  
-    
+
+  <div id="content_add" class="tab_content">
+    <form class="pure-form pure-form-stacked" id="name">
+     <label for="name">Name</label>
+     <input id="name" placeholder="Jane Smith">
+    </form>
+
+    <form class="pure-form pure-form-stacked" id="number">
+     <label for="number">Phone Number</label>
+     <input id="number" placeholder="(000)-000-0000">
+    </form>
+
+    <form class="pure-form pure-form-stacked" id="email">
+     <label for="name">Email</label>
+     <input id="email" placeholder="Jane.Smith@colorado.edu">
+    </form>
+  </div>
+</div>
+
+
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="phone.js"></script>
- </body>
+</body>
 </html>
